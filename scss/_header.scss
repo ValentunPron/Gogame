@@ -1,0 +1,26 @@
+.header {
+	padding: 10px 0;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__logo {
+	}
+
+	&__nav {
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 50px;
+	}
+
+	&__link {
+	}
+
+	&__button {
+	}
+}
