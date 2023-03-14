@@ -3,6 +3,7 @@ const scroll = () => {
 	for (let smoothLink of smoothLinks) {
 		smoothLink.addEventListener('click', function (e) {
 			e.preventDefault();
+			document.body.classList.add('lock')
 			const id = smoothLink.getAttribute('href');
 
 			if(document.querySelector('.header__burger')) {
