@@ -106,3 +106,50 @@ a {
 .lock {
 	overflow: hidden;
 }
+
+.wrapperDialog {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0; left: 0;
+	width: 100vw; height: 100vh;
+	background-color: transparent;
+	transform: scale(0);
+	transform: rotate(120deg);
+	transition: 0.5s ease-in;
+	&.active {
+		z-index: -1;
+		background-color: #00000064;;
+		transform: scale(1);
+		transform: rotate(0deg);
+		z-index: 100;
+		.dialog {
+			opacity: 1;
+		}
+	}
+	.dialog {
+		display: inline-flex;
+		opacity: 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #ffffffc8;
+		min-height: 120px;
+		border-radius: 20px;
+		max-width: 600px;
+		transition: 0.5s ease-in;
+		padding: 20px 40px;
+		span {
+			text-align: center;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+		}
+		&__button {
+			padding: 10px 30px !important;
+			margin: 0 auto;
+		}
+	}
+}
+.button {
+}

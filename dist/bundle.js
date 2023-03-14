@@ -20,13 +20,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./js/modules/dialog.js":
+/*!******************************!*\
+  !*** ./js/modules/dialog.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst dialog = () => {\r\n\tdocument.querySelectorAll('.button').forEach((item) => {\r\n\t\tconsole.log(item)\r\n\t\titem.addEventListener('click', (e) => {\r\n\t\t\te.preventDefault();\r\n\t\r\n\t\t\tdocument.querySelector('.wrapperDialog').classList.toggle('active');\r\n\t\t})\r\n\t})\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dialog);\n\n//# sourceURL=webpack://gogames/./js/modules/dialog.js?");
+
+/***/ }),
+
+/***/ "./js/modules/scroll.js":
+/*!******************************!*\
+  !*** ./js/modules/scroll.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scroll = () => {\r\n\tconst smoothLinks = document.querySelectorAll('.header__link');\r\n\tfor (let smoothLink of smoothLinks) {\r\n\t\tsmoothLink.addEventListener('click', function (e) {\r\n\t\t\te.preventDefault();\r\n\t\t\tconst id = smoothLink.getAttribute('href');\r\n\r\n\t\t\tif(document.querySelector('.header__burger')) {\r\n\t\t\t\tdocument.querySelector('.header__body').classList.toggle('active');\r\n\t\t\t\tdocument.body.classList.toggle('lock');\r\n\t\t\t}\r\n\t\t\tdocument.querySelector(id).scrollIntoView({\r\n\t\t\t\tblock: 'start',\r\n\t\t\t\tbehavior: 'smooth'\r\n\t\t\t});\r\n\t\t});\r\n\t};\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);\n\n//# sourceURL=webpack://gogames/./js/modules/scroll.js?");
+
+/***/ }),
+
 /***/ "./js/script.js":
 /*!**********************!*\
   !*** ./js/script.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger */ \"./js/modules/burger.js\");\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n\t(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://gogames/./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger */ \"./js/modules/burger.js\");\n/* harmony import */ var _modules_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dialog */ \"./js/modules/dialog.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scroll */ \"./js/modules/scroll.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n\t(0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\t(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\t(0,_modules_dialog__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://gogames/./js/script.js?");
 
 /***/ })
 
