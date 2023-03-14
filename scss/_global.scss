@@ -18,7 +18,6 @@ a {
 	&__top {
 		position: relative;
 		background-color: rgba($color: #EAAC8B, $alpha: 0.45);
-		min-height: 844px;
 		&::before {
 			position: absolute;
 			content: '';
@@ -61,4 +60,43 @@ a {
 		background-size: 200% 100%;
 		background-position: 100% 50%;
 	}
+}
+
+.link {
+	font-size: 1rem;
+	line-height: 1.2;
+	color: var(--blue);
+	transition: color .3s ease-in;
+	&:hover {
+		color: #28415a
+	}
+}
+
+.subtitle {
+	font-weight: 500;
+	font-size: 1.27rem;
+	line-height: 1.05;
+	margin-bottom: 26px;
+}
+.title {
+	font-weight: 700;
+	font-size: 3.77rem;
+	line-height: 1.15;
+	color: #EB8382;
+	color: var(--red);
+	margin-bottom: 30px;
+	span {
+		color: var(--blue);
+	}
+}
+.desc {
+	font-size: 1rem;
+	line-height: 1.7;
+	text-align: justify;
+	color: #826F8C;
+	margin-bottom: 36px;
+}
+
+.lock {
+	overflow: hidden;
 }

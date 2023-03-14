@@ -7,20 +7,16 @@
 		gap: 10px;
 	}
 
-	&__logo {
-	}
-
 	&__nav {
-		margin-top: 10px;
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		gap: 50px;
+		margin-top: 10px;
 	}
 
-	&__link {
-	}
-
-	&__button {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
 	}
 }
