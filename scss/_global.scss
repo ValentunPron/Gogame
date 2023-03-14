@@ -68,6 +68,10 @@ a {
 	}
 }
 
+button:focus, a:focus {
+	border: 2px solid blue;
+}
+
 .link {
 	font-size: 1rem;
 	line-height: 1.2;
