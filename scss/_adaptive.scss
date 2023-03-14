@@ -24,6 +24,13 @@
 			right: -5%;
 		}
 	}
+	.about {
+		margin-top: 80px;
+		&__body {
+			gap: 50px;
+		}
+
+	}
 }
 @media (max-width: 1025px) {
 	html {
@@ -120,8 +127,35 @@
 			width: 56px; height: auto;
 		}	
 	}
+	.about {
+		margin-top: 100px;
+		padding-bottom: 50px;
+		&__body {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+			flex-direction: row;
+		}
+		&__title {
+			font-size: 3rem;
+		}
+		&__image {
+			width: 100%;
+			min-width: 250px;
+			height: auto;
+		}
+	
+	}
+	.VR-about {
+		.about__content {
+			max-width: 430px;
+		}
+	}
 }
 @media (max-width: 770px) {
+	.container {
+		padding: 0 20px;
+	}
 	.header {
 		padding: 5px 0;
 		&__nav {
@@ -263,6 +297,37 @@
 				max-width: none;
 			}
 		}	
+	}
+	.about {
+		margin-top: 50px;
+		padding-bottom: 20px;
+		&__body {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			gap: 30px;
+		}
+		&__title {
+			font-size: 3rem;
+		}
+		&__image-block {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		&__image {
+			width: 100%;
+			max-width: 400px;
+			height: auto;
+		}
+	
+	}
+	.VR-about {
+		.about__content {
+			max-width: none;
+			&::after {
+				display: none;
+			}
+		}
 	}
 }
 @media (max-width: 420px) {

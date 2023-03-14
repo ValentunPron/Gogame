@@ -4,6 +4,7 @@ body {
 	font-size: 1rem;
 	line-height: 1.2;
 	color: var(--blue);
+	background: #FFE6D7;
 }
 
 a {
@@ -17,7 +18,7 @@ a {
 	overflow: hidden;
 	&__top {
 		position: relative;
-		background-color: rgba($color: #EAAC8B, $alpha: 0.45);
+		background-color: rgba($color: #FFE6D7, $alpha: 0.35);
 		&::before {
 			position: absolute;
 			content: '';

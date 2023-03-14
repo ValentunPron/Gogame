@@ -1,0 +1,52 @@
+.about {
+	margin-top: 100px;
+	padding-bottom: 50px;
+	&__body {
+		display: flex;
+		align-items: center;
+		gap: 75px;
+		flex-direction: row;
+	}
+
+	&__image-block {
+		width: 100%;
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+
+	&__title {
+		font-size: 3rem;
+	}
+}
+.VR-about {
+	.about__content {
+		max-width: 540px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			width: 400px; height: 360px;
+			background-image: url('../img/about/VR.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			bottom: -250px;
+			left: 50px; 
+			margin: auto;
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			display: flex;
+			width: 400px; height: 500px;
+			background-image: url('../img/about/bgMen.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			top: -100px;
+			right: -250px;
+		}
+	}
+}
+
