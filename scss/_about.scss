@@ -1,6 +1,4 @@
 .about {
-	margin-top: 100px;
-	padding-bottom: 50px;
 	&__body {
 		display: flex;
 		align-items: center;
@@ -22,6 +20,8 @@
 	}
 }
 .VR-about {
+	margin-top: 100px;
+	padding-bottom: 75px;
 	.about__content {
 		max-width: 540px;
 		position: relative;
@@ -32,7 +32,7 @@
 			background-image: url('../img/about/VR.png');
 			background-repeat: no-repeat;
 			background-size: contain;
-			bottom: -250px;
+			bottom: -300px;
 			left: 50px; 
 			margin: auto;
 		}
@@ -50,3 +50,37 @@
 	}
 }
 
+.XBOX-about {
+	position: relative;
+	padding: 50px 0;
+	background-color: rgba($color: #FFE6D7, $alpha: 0.1);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&::before {
+		position: absolute;
+		content: '';
+		background-image: url('../img/about/bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.05;
+		z-index: -1;
+	}
+	.about__content {
+		max-width: 520px;
+	}
+	.about__image-block {
+		position: relative;
+		&::before {
+			position: absolute;
+			content: '';
+			background-image: url('../img/bg/dots.svg');
+			background-repeat: no-repeat;
+			width: 170px; height: 170px;
+			bottom: 20px; right: -100px;
+			z-index: -1;
+		}
+	}
+}

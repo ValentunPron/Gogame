@@ -49,6 +49,7 @@ a {
 }
 
 .button {
+	position: relative;
 	background: linear-gradient(94.66deg, #4499D9 17.46%, #7367BE 87.77%);
 	background-size: 100% 100%;
 	background-position: 0% 0%;
@@ -57,9 +58,13 @@ a {
 	line-height: 1;
 	color: var(--white);
 	transition: 0.4s ease;
+	z-index: 4;
 	&:hover {
 		background-size: 200% 100%;
 		background-position: 100% 50%;
+	}
+	&.big {
+		padding: 14px 30px;
 	}
 }
 

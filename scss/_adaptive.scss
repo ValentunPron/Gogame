@@ -25,7 +25,6 @@
 		}
 	}
 	.about {
-		margin-top: 80px;
 		&__body {
 			gap: 50px;
 		}
@@ -128,8 +127,7 @@
 		}	
 	}
 	.about {
-		margin-top: 100px;
-		padding-bottom: 50px;
+		padding-bottom: 20px;
 		&__body {
 			display: flex;
 			align-items: center;
@@ -147,8 +145,24 @@
 	
 	}
 	.VR-about {
+		padding-bottom: 75px;
 		.about__content {
 			max-width: 430px;
+			&::after {
+				position: absolute;
+				content: '';
+				width: 200px; height: 160px;
+				background-size: cover;
+				bottom: -100px;
+				left: 00px; 
+				margin: auto;
+			}
+		}
+	}
+	.XBOX-about {
+		padding: 30px 0;
+		.about__content {
+			max-width: 450px;
 		}
 	}
 }
@@ -299,8 +313,6 @@
 		}	
 	}
 	.about {
-		margin-top: 50px;
-		padding-bottom: 20px;
 		&__body {
 			display: flex;
 			flex-direction: column-reverse;
@@ -322,11 +334,21 @@
 	
 	}
 	.VR-about {
+		margin-top: 50px;
 		.about__content {
 			max-width: none;
 			&::after {
 				display: none;
 			}
+		}
+	}
+	.XBOX-about {
+		padding: 30px 0;
+		.about__content {
+			max-width: none
+		}
+		.about__body {
+			flex-direction: column;
 		}
 	}
 }
@@ -408,6 +430,14 @@
 		.try-it-box {
 			&__image {
 				max-width: 50px;
+			}
+		}
+	}
+	.XBOX-about {
+		.about__image-block {
+			position: relative;
+			&::before {
+				display: none;
 			}
 		}
 	}

@@ -132,6 +132,7 @@ a {
 }
 
 .button {
+  position: relative;
   background: linear-gradient(94.66deg, #4499D9 17.46%, #7367BE 87.77%);
   background-size: 100% 100%;
   background-position: 0% 0%;
@@ -140,11 +141,16 @@ a {
   line-height: 1;
   color: var(--white);
   transition: 0.4s ease;
+  z-index: 4;
 }
 
 .button:hover {
   background-size: 200% 100%;
   background-position: 100% 50%;
+}
+
+.button.big {
+  padding: 14px 30px;
 }
 
 .link {
@@ -369,11 +375,6 @@ a {
   gap: 5px;
 }
 
-.about {
-  margin-top: 100px;
-  padding-bottom: 50px;
-}
-
 .about__body {
   display: flex;
   align-items: center;
@@ -394,6 +395,11 @@ a {
   font-size: 3rem;
 }
 
+.VR-about {
+  margin-top: 100px;
+  padding-bottom: 75px;
+}
+
 .VR-about .about__content {
   max-width: 540px;
   position: relative;
@@ -407,7 +413,7 @@ a {
   background-image: url("../img/about/VR.png");
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: -250px;
+  bottom: -300px;
   left: 50px;
   margin: auto;
 }
@@ -423,6 +429,47 @@ a {
   background-size: cover;
   top: -100px;
   right: -250px;
+}
+
+.XBOX-about {
+  position: relative;
+  padding: 50px 0;
+  background-color: rgba(255, 230, 215, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.XBOX-about::before {
+  position: absolute;
+  content: '';
+  background-image: url("../img/about/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.XBOX-about .about__content {
+  max-width: 520px;
+}
+
+.XBOX-about .about__image-block {
+  position: relative;
+}
+
+.XBOX-about .about__image-block::before {
+  position: absolute;
+  content: '';
+  background-image: url("../img/bg/dots.svg");
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 170px;
+  bottom: 20px;
+  right: -100px;
+  z-index: -1;
 }
 
 @media (max-width: 1241px) {
@@ -445,9 +492,6 @@ a {
     position: absolute;
     bottom: 0;
     right: -5%;
-  }
-  .about {
-    margin-top: 80px;
   }
   .about__body {
     gap: 50px;
@@ -547,8 +591,7 @@ a {
     height: auto;
   }
   .about {
-    margin-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   .about__body {
     display: flex;
@@ -564,8 +607,27 @@ a {
     min-width: 250px;
     height: auto;
   }
+  .VR-about {
+    padding-bottom: 75px;
+  }
   .VR-about .about__content {
     max-width: 430px;
+  }
+  .VR-about .about__content::after {
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 160px;
+    background-size: cover;
+    bottom: -100px;
+    left: 00px;
+    margin: auto;
+  }
+  .XBOX-about {
+    padding: 30px 0;
+  }
+  .XBOX-about .about__content {
+    max-width: 450px;
   }
 }
 
@@ -713,10 +775,6 @@ a {
   .try-it #try-it-box__Controler .desc {
     max-width: none;
   }
-  .about {
-    margin-top: 50px;
-    padding-bottom: 20px;
-  }
   .about__body {
     display: flex;
     flex-direction: column-reverse;
@@ -735,11 +793,23 @@ a {
     max-width: 400px;
     height: auto;
   }
+  .VR-about {
+    margin-top: 50px;
+  }
   .VR-about .about__content {
     max-width: none;
   }
   .VR-about .about__content::after {
     display: none;
+  }
+  .XBOX-about {
+    padding: 30px 0;
+  }
+  .XBOX-about .about__content {
+    max-width: none;
+  }
+  .XBOX-about .about__body {
+    flex-direction: column;
   }
 }
 
@@ -817,5 +887,11 @@ a {
   }
   .try-it .try-it-box__image {
     max-width: 50px;
+  }
+  .XBOX-about .about__image-block {
+    position: relative;
+  }
+  .XBOX-about .about__image-block::before {
+    display: none;
   }
 }
